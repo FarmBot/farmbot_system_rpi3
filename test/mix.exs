@@ -36,7 +36,7 @@ defmodule Test.Mixfile do
   def deps do
     [
       {:nerves, "~> 0.7", runtime: false},
-      {:nerves_system_rpi3, path: "../", runtime: false},
+      {:nerves_system_farmbot_rpi3, path: "../", runtime: false},
       {:nerves_system_test, github: "nerves-project/nerves_system_test"}
       #{:nerves_system_test, path: "../../nerves_system_test"}
     ]

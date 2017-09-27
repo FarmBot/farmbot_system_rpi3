@@ -5,14 +5,14 @@ version =
   |> File.read!
   |> String.trim
 
-pkg = :nerves_system_rpi3
+pkg = :nerves_system_farmbot_rpi3
 
 config pkg, :nerves_env,
   type: :system,
   version: version,
   compiler: :nerves_package,
   artifact_url: [
-    "https://github.com/nerves-project/#{pkg}/releases/download/v#{version}/#{pkg}-v#{version}.tar.gz",
+    "https://github.com/farmbot-labs/#{pkg}/releases/download/v#{version}/#{pkg}-v#{version}.tar.gz",
   ],
   platform: Nerves.System.BR,
   platform_config: [
