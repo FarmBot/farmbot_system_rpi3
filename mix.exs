@@ -16,7 +16,9 @@ defmodule NervesSystemFarmbotRpi3.Mixfile do
       description: description(),
       package: package(),
       deps: deps(),
-      aliases: ["deps.precompile": ["nerves.env", "deps.precompile"]]
+      aliases: [
+        "deps.precompile": ["nerves.env", "deps.precompile"],
+        "deps.get": ["deps.get", "nerves.deps.get"]]
     ]
   end
 
@@ -28,7 +30,7 @@ defmodule NervesSystemFarmbotRpi3.Mixfile do
     [
       type: :system,
       artifact_url: [
-        "https://github.com/farmbot-labs/#{@app}/releases/download/v#{@version}/#{@app}-v#{@version}.tar.gz",
+        {:github_releases, "farmbot-labs/#{@app}"},
       ],
       platform: Nerves.System.BR,
       platform_config: [
@@ -40,9 +42,9 @@ defmodule NervesSystemFarmbotRpi3.Mixfile do
 
   defp deps do
     [
-      {:nerves, "~> 0.8", runtime: false},
-      {:nerves_system_br, "0.16.3", runtime: false},
-      {:nerves_toolchain_arm_unknown_linux_gnueabihf, "~> 0.12.1", runtime: false},
+      {:nerves, "~> 0.9", runtime: false },
+      {:nerves_system_br, "0.17.0", runtime: false},
+      {:nerves_toolchain_arm_unknown_linux_gnueabihf, "~> 0.13.0", runtime: false},
       {:nerves_system_linter, "~> 0.2.2", runtime: false}
     ]
   end
