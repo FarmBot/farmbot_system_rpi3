@@ -30,7 +30,8 @@ defmodule NervesSystemFarmbotRpi3.Mixfile do
     [
       type: :system,
       artifact_url: [
-        {:github_releases, "farmbot-labs/#{@app}"},
+        "https://github.com/farmbot-labs/#{@app}/releases/download/v#{@version}/#{@app}-v#{@version}.tar.gz"
+        # {:github_releases, "farmbot-labs/#{@app}"},
       ],
       platform: Nerves.System.BR,
       platform_config: [
