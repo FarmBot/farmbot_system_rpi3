@@ -31,7 +31,7 @@ defmodule NervesSystemFarmbotRpi3.Mixfile do
     Mix.Task.run("loadconfig", args)
   end
 
-  def nerves_package do
+  defp nerves_package do
     [
       type: :system,
       artifact_url: [
@@ -48,7 +48,7 @@ defmodule NervesSystemFarmbotRpi3.Mixfile do
 
   defp deps do
     [
-      {:nerves, "~> 1.0-rc", runtime: false },
+      {:nerves, "~> 1.0-rc", runtime: false},
       {:nerves_system_br, "~> 1.0-rc", runtime: false},
       {:nerves_toolchain_arm_unknown_linux_gnueabihf, "~> 1.0-rc", runtime: false},
       {:nerves_system_linter, "~> 0.3.0", runtime: false},
