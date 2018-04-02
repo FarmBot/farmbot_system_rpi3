@@ -58,7 +58,7 @@ defmodule NervesSystemFarmbotRpi3.Mixfile do
 
   defp description do
     """
-    Nerves System - Raspberry Pi 3 B
+    Nerves System - Raspberry Pi 3 B / B+
     """
   end
 
@@ -84,7 +84,7 @@ defmodule NervesSystemFarmbotRpi3.Mixfile do
       "post-createfs.sh",
       "post-build.sh",
       "cmdline.txt",
-      "linux-4.4.defconfig",
+      "linux-4.9.defconfig",
       "config.txt"
     ]
   end
