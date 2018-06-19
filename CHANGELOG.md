@@ -1,11 +1,24 @@
 # Changelog
 
+<<<<<<< HEAD
 ## v1.5.1
 
 * Enhancements
   * Enable configuration for the Raspberry Pi 7" touchscreen display by default.
 * Updated dependencies
   * [nerves_system_br v1.5.3](https://github.com/nerves-project/nerves_system_br/releases/tag/v1.5.3)
+=======
+## 1.5.0-farmbot.0
+
+Apply Farmbot Patches
+
+* Updated dependencies
+  * Enable `dnsmasq`
+  * Enable more serial drivers in kernel.
+  * Enable v4l drivers in kernel
+  * Enable python2
+  * Enable opencv2.4
+>>>>>>> 4731e48... Apply Farmbot Patches
 
 ## v1.5.0
 
