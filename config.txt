@@ -15,7 +15,7 @@ kernel=zImage
 gpu_mem=192
 
 # Enable I2C and SPI
-dtparam=i2c_arm=on,spi=on
+dtparam=i2c_arm=on,spi=on,audio=on
 
 # Comment this in or modify to enable OneWire
 # NOTE: check that the overlay that you specify is in the boot partition or
