@@ -1,7 +1,7 @@
-defmodule NervesSystemRpi3.MixProject do
+defmodule NervesSystemFarmbotRpi3.Mixfile do
   use Mix.Project
 
-  @app :nerves_system_rpi3
+  @app :nerves_system_farmbot_rpi3
   @version Path.join(__DIR__, "VERSION")
            |> File.read!()
            |> String.trim()
@@ -35,7 +35,7 @@ defmodule NervesSystemRpi3.MixProject do
     [
       type: :system,
       artifact_sites: [
-        {:github_releases, "nerves-project/#{@app}"}
+        {:github_releases, "farmbot-labs/#{@app}"},
       ],
       platform: Nerves.System.BR,
       platform_config: [
@@ -63,10 +63,10 @@ defmodule NervesSystemRpi3.MixProject do
 
   defp package do
     [
-      maintainers: ["Frank Hunleth", "Justin Schneck"],
+      maintainers: ["Connor Rigby"],
       files: package_files(),
       licenses: ["Apache 2.0"],
-      links: %{"GitHub" => "https://github.com/nerves-project/#{@app}"}
+      links: %{"GitHub" => "https://github.com/farmbot-labs/#{@app}"}
     ]
   end
 

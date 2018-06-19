@@ -1,5 +1,16 @@
 # Changelog
 
+## 1.5.0-farmbot.0
+
+Apply Farmbot Patches
+
+* Updated dependencies
+  * Enable `dnsmasq`
+  * Enable more serial drivers in kernel.
+  * Enable v4l drivers in kernel
+  * Enable python2
+  * Enable opencv2.4
+
 ## v1.5.0
 
 This release updates the Linux kernel from 4.4/4.9 to 4.14.71.
