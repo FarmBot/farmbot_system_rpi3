@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.3.0-farmbot.1
+Apply Farmbot Patches
+
 ## v1.3.0
 
 This release upgrades gcc from version 6.3.0 to 7.3.0. See the toolchain release
