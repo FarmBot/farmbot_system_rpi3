@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.5.1-farmbot.2
+
+* Updated dependencies
+  * enable `wpa_passphrase`
+
+## 1.5.1-farmbot.1
+
 ## 1.5.1-farmbot.0
 
 Apply Farmbot Patches
