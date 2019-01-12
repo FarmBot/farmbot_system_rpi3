@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.6.1-farmbot.0
+
+* Updated dependencies
+  * Python 3
+  * OpenCv 3
+
 ## v1.6.1
 
 * Updated dependencies
