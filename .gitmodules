@@ -1,3 +1,0 @@
-[submodule "buildroot-packages"]
-	path = buildroot-packages
-	url = git@github.com:farmbot-labs/buildroot-packages.git
