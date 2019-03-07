@@ -1,5 +1,27 @@
 # Changelog
 
+## v1.6.3-farmbot.0
+
+  * Merge Upstream system
+
+## v1.6.3
+
+ * Updated dependencies
+  * [nerves_system_br v1.6.8](https://github.com/nerves-project/nerves_system_br/releases/tag/v1.6.8)
+  * Erlang 21.2.6
+
+## v1.6.2
+
+* Updated dependencies
+  * [nerves_system_br v1.6.6](https://github.com/nerves-project/nerves_system_br/releases/tag/v1.6.6)
+  * Erlang 21.2.4
+  * boardid 1.5.3
+
+## v1.6.1-farmbot.1
+
+* Enhancements
+  * Add unprivileged user for Farmware
+
 ## v1.6.1-farmbot.0
 
 * Updated dependencies
