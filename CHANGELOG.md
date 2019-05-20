@@ -3,6 +3,18 @@
 ## v1.7.2-farmbot.0
 
   * Merge Upstream system
+  * Busybox
+    * enable `mktmp`
+    * enable `runparts`
+    * enable `dnsdomains` (dnsd)
+    * enable `ifconfig`
+    * enable `ifplugd`
+    * enable `ifupdown`
+    * enable `udhcpd`
+  * Buildroot
+    * enable `wpa_cli`
+    * enable autoscan option in `wpa_supplicant`
+    * disable `dnsmasq`
 
 ## v1.7.2
 
