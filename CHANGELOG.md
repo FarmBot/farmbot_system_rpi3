@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.8.0-farmbot.0
+
+* Merge Upstream system
+
 ## v1.8.0
 
 This release
