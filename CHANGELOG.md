@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.8.0-farmbot.1
+
+* Change TTY that erlinit uses for UART console
+
 ## v1.8.0-farmbot.0
 
 * Merge Upstream system
