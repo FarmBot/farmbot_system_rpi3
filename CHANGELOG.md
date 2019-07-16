@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.8.0-farmbot.2
+
+* Fix booting on rpi3b+ and rpi3a
+
 ## v1.8.0-farmbot.1
 
 * Change TTY that erlinit uses for UART console
