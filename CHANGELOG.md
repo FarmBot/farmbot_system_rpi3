@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.8.2-farmbot.0
+
+* Added kernel modules
+  * RTL8188
+
 ## v1.8.2
 
 This release fixes an issue that broke display output on small LCD screens.
