@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.8.2-farmbot.1
+
+* Updated dependencies
+  * [nerves_system_br v1.9.1](https://github.com/nerves-project/nerves_system_br/releases/tag/v1.9.1)
+
 ## 1.8.2-farmbot.0
 
 * Added kernel modules
