@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.8.2-farmbot.2
+
+* Added kernel modules
+  * most RTL chips
+
 ## 1.8.2-farmbot.1
 
 * Updated dependencies
