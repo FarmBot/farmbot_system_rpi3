@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.9.1-farmbot.1
+
+* Merge upstream system
+* Fix python opencv bug
+  * [details](http://lists.busybox.net/pipermail/buildroot/2019-September/259271.html)
+
 ## v1.9.1
 
 This release pulls in security and bug fix updates from `nerves_system_br`.
