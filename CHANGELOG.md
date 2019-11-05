@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.9.1-farmbot.2
+
+* move repository to `farmbot` org
+
 ## v1.9.1-farmbot.1
 
 * Merge upstream system

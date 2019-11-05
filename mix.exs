@@ -35,7 +35,7 @@ defmodule FarmbotSystemRpi3.Mixfile do
     [
       type: :system,
       artifact_sites: [
-        {:github_releases, "farmbot-labs/#{@app}"},
+        {:github_releases, "farmbot/#{@app}"},
       ],
       build_runner_opts: build_runner_opts(),
       platform: Nerves.System.BR,
@@ -66,7 +66,7 @@ defmodule FarmbotSystemRpi3.Mixfile do
     [
       files: package_files(),
       licenses: ["Apache 2.0"],
-      links: %{"GitHub" => "https://github.com/farmbot-labs/#{@app}"}
+      links: %{"GitHub" => "https://github.com/farmbot/#{@app}"}
     ]
   end
 
