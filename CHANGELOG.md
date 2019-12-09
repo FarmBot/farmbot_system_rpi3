@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.9.0-farmbot.2
+
+* Fix espeak
+
 ## 1.9.0-farmbot.1
 
 * Merge Upstream system
