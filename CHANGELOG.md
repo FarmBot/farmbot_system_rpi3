@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.9.1-farmbot.4
+
+* republish of 1.9.1-farmbot.3
+
 ## 1.9.1-farmbot.3
 
 * Fix espeak
