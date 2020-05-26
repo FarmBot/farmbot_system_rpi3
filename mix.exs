@@ -1,6 +1,7 @@
 defmodule FarmbotSystemRpi3.Mixfile do
   use Mix.Project
 
+  @github_organization "farmbot"
   @app :farmbot_system_rpi3
   @version Path.join(__DIR__, "VERSION")
            |> File.read!()
@@ -35,7 +36,7 @@ defmodule FarmbotSystemRpi3.Mixfile do
     [
       type: :system,
       artifact_sites: [
-        {:github_releases, "farmbot/#{@app}"},
+        {:github_releases, "#{@github_organization}/#{@app}"},
       ],
       build_runner_opts: build_runner_opts(),
       platform: Nerves.System.BR,
@@ -66,7 +67,7 @@ defmodule FarmbotSystemRpi3.Mixfile do
     [
       files: package_files(),
       licenses: ["Apache 2.0"],
-      links: %{"GitHub" => "https://github.com/farmbot/#{@app}"}
+      links: %{"GitHub" => "https://github.com/#{@github_organization}/#{@app}"}
     ]
   end
 
