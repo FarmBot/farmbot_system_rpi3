@@ -21,3 +21,6 @@ erl_crash.dump
 /archive.log
 /.nerves
 farmbot_system_rpi3-*
+log*
+*.tar.gz
+*.tar.xz
