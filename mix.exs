@@ -64,8 +64,8 @@ defmodule FarmbotSystemRpi3.Mixfile do
   defp deps do
     [
       {:nerves, "~> 1.5.4 or ~> 1.6.0 or ~> 1.7.4", runtime: false},
-      {:nerves_system_br, "1.15.1", runtime: false},
-      {:nerves_toolchain_armv7_nerves_linux_gnueabihf, "~> 1.4.2", runtime: false},
+      {:nerves_system_br, "1.16.5", runtime: false},
+      {:nerves_toolchain_armv7_nerves_linux_gnueabihf, "~> 1.4.3", runtime: false},
       {:nerves_system_linter, "~> 0.4", only: [:dev, :test], runtime: false},
       {:ex_doc, "~> 0.22", only: :docs, runtime: false}
     ]
@@ -122,9 +122,14 @@ defmodule FarmbotSystemRpi3.Mixfile do
   end
 
   defp build_runner_opts() do
+    # Download source files first to get download errors right away.
+    [make_args: primary_site() ++ ["source", "all"]]
+  end
+
+  defp primary_site() do
     case System.get_env("BR2_PRIMARY_SITE") do
       nil -> []
-      primary_site -> [make_args: ["BR2_PRIMARY_SITE=#{primary_site}"]]
+      primary_site -> ["BR2_PRIMARY_SITE=#{primary_site}"]
     end
   end
 

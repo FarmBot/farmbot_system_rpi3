@@ -1,6 +1,53 @@
 # Changelog
 
-## v1.15.1-farmbot.1
+## v1.16.2
+
+This release updates Erlang/OTP from 24.0.3 to 24.0.5 and Buildroot from 2021.05
+to 2021.05.1. Both of these are security/bug fix updates. This is expected to be
+a safe upgrade from v1.16.1 for all users.
+
+* Updated dependencies
+  * [nerves_system_br v1.16.4](https://github.com/nerves-project/nerves_system_br/releases/tag/v1.16.1)
+  * [Erlang/OTP 24.0.5](https://erlang.org/download/OTP-24.0.5.README)
+
+* Improvements
+  * Beta support for using a `runtime.exs` script for runtime configuration.
+  * Added a `provision` task to the `fwup.config` to enable re-provisioning a
+    MicroSD card without changing its contents.
+  * Adds a default `/etc/sysctl.conf` that enables use of ICMP in Erlang. This
+    requires `nerves_runtime v0.11.5` or later to automatically load the sysctl
+    variables. With it using `:gen_udp` to send/receive ICMP will "just work".
+    It also makes it easier to add other sysctl variables if needed.
+
+## v1.16.1
+
+This release updates Nerves Toolchains to v1.4.3 and OTP 24.0.3. It should be safe for everyone to apply.
+
+* Updated dependencies
+  * [nerves_system_br v1.16.1](https://github.com/nerves-project/nerves_system_br/releases/tag/v1.16.1)
+  * [Erlang/OTP 24.0.3](https://erlang.org/download/OTP-24.0.3.README)
+  * [nerves toolchains v1.4.3](https://github.com/nerves-project/toolchains/releases/tag/v1.4.3)
+
+## v1.16.0
+
+This release updates to Buildroot 2021.05 and OTP 24.0.2. If you have made a
+custom system off this one, please review the `nerves_system_br v1.16.0` release
+notes.
+
+* Updated dependencies
+  * [nerves_system_br v1.16.0](https://github.com/nerves-project/nerves_system_br/releases/tag/v1.16.0)
+  * [Buildroot 2021.05](http://lists.busybox.net/pipermail/buildroot/2021-June/311946.html)
+  * [Erlang/OTP 24.0.2](https://erlang.org/download/OTP-24.0.2.README)
+
+* Improvements
+  * This release now contains debug symbols and includes the Build-ID in the
+    ELF headers. This makes it easier to get stack traces from C programs. As
+    before, the Nerves tooling strips all symbols from firmware images, so this
+    won't make programs bigger.
+  * Enable compile-time `wpa_supplicant` options to support WPA3, mesh
+    networking, WPS and autoscan.
+
+## v1.15.1
 
  * Merge upstream systems.
 
