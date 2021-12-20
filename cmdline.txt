@@ -1,4 +1,1 @@
-# OLD CMDLINE:
-# vt.global_cursor_default=0 console=tty1 console=serial0,115200 fbcon=scrollback:1024k root=/dev/mmcblk0p2 rootwait consoleblank=0
-# NEW CMDLINE
 console=tty1 console=serial0,115200 fbcon=scrollback:1024k root=/dev/mmcblk0p2 rootwait consoleblank=0 quiet
