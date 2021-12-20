@@ -13,7 +13,7 @@ This is the base Nerves System configuration for the Raspberry Pi 3 Model B.
 | CPU                  | 1.2 GHz quad-core Cortex-A53 (ARMv8)                        |
 | Memory               | 1 GB DRAM                                                   |
 | Storage              | MicroSD                                                     |
-| Linux kernel         | 5.4 w/ Raspberry Pi patches                                 |
+| Linux kernel         | 5.10 w/ Raspberry Pi patches                                |
 | IEx terminal         | HDMI and USB keyboard (can be changed to UART)              |
 | GPIO, I2C, SPI       | Yes - [Elixir Circuits](https://github.com/elixir-circuits) |
 | ADC                  | No                                                          |
@@ -22,8 +22,8 @@ This is the base Nerves System configuration for the Raspberry Pi 3 Model B.
 | Display              | HDMI or 7" RPi Touchscreen                                  |
 | Camera               | Yes - via rpi-userland                                      |
 | Ethernet             | Yes                                                         |
-| WiFi                 | Yes - [VintageNet](https://hex.pm/packages/vintage_net)     |
-| Bluetooth            | Watch [Harald](https://github.com/verypossible/harald)      |
+| WiFi                 | Yes                                                         |
+| Bluetooth            | [See Bluetooth](#bluetooth)                                 |
 | Audio                | HDMI/Stereo out                                             |
 
 ## Using
@@ -35,12 +35,18 @@ for more information.
 
 If you need custom modifications to this system for your device, clone this
 repository and update as described in [Making custom
-systems](https://hexdocs.pm/nerves/systems.html#customizing-your-own-nerves-system)
+systems](https://hexdocs.pm/nerves/customizing-systems.html).
 
 ## Supported WiFi devices
 
 The base image includes drivers for the onboard Raspberry Pi 3 wifi module
 (`brcmfmac` driver).
+
+## Bluetooth
+
+[BlueHeronTransportUART](https://github.com/blue-heron/blue_heron_transport_uart)
+supports bluetooth on the Pi 3A using `ttyS0`. The details are similar to the [RPi Zero W]
+(https://github.com/nerves-project/nerves_system_rpi0/issues/224#issuecomment-913799838).
 
 ## Audio
 
@@ -48,18 +54,11 @@ The Raspberry Pi has many options for audio output. This system supports the
 HDMI and stereo audio jack output. The Linux ALSA drivers are used for audio
 output.
 
-To try it out, run:
-
-```elixir
-:os.cmd('espeak -ven+f5 -k5 -w /tmp/out.wav Hello')
-:os.cmd('aplay -q /tmp/out.wav')
-```
-
 The general Raspberry Pi audio documentation mostly applies to Nerves. For
 example, to force audio out the HDMI port, run:
 
 ```elixir
-:os.cmd('amixer cset numid=3 2')
+cmd("amixer cset numid=3 2")
 ```
 
 Change the last argument to `amixer` to `1` to output to the stereo output jack.
@@ -128,8 +127,8 @@ in a U-boot environment block. This is a special region that is separate from
 the application partition so reformatting the application partition will not
 lose the serial number or any other data stored in this block.
 
-Additional key value pairs can be provisioned by overriding the default provisioning.conf
-file location by setting the environment variable
+Additional key value pairs can be provisioned by overriding the default
+provisioning.conf file location by setting the environment variable
 `NERVES_PROVISIONING=/path/to/provisioning.conf`. The default provisioning.conf
 will set the `nerves_serial_number`, if you override the location to this file,
 you will be responsible for setting this yourself.
