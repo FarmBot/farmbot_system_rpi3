@@ -5,10 +5,10 @@
 ```bash
 apt update
 apt upgrade -y
-apt install -y build-essential automake autoconf git squashfs-tools ssh-askpass pkg-config curl libssl-dev libncurses5-dev bc m4 unzip cmake python libwxgtk3.0-gtk3-dev libnl-genl-3-dev bc rsync subversion libmnl-dev
-wget https://github.com/fwup-home/fwup/releases/download/v1.9.0/fwup_1.9.0_amd64.deb
-dpkg -i fwup_1.9.0_amd64.deb
-git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.9.0
+apt install -y build-essential automake autoconf git squashfs-tools ssh-askpass pkg-config curl libssl-dev libncurses5-dev bc m4 unzip cmake python3 libwxgtk3.0-gtk3-dev libnl-genl-3-dev bc rsync subversion libmnl-dev
+wget https://github.com/fwup-home/fwup/releases/download/v1.9.1/fwup_1.9.1_amd64.deb
+dpkg -i fwup_1.9.1_amd64.deb
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.11.0
 echo -e '\n. $HOME/.asdf/asdf.sh' >> ~/.bashrc
 source ~/.bashrc
 asdf plugin-add erlang
