@@ -66,8 +66,8 @@ defmodule FarmbotSystemRpi3.Mixfile do
   defp deps do
     [
       {:nerves, "~> 1.5.4 or ~> 1.6.0 or ~> 1.7.15 or ~> 1.8", runtime: false},
-      {:nerves_system_br, "1.23.2", runtime: false},
-      {:nerves_toolchain_armv7_nerves_linux_gnueabihf, "~> 1.8.0", runtime: false},
+      {:nerves_system_br, "1.27.0", runtime: false},
+      {:nerves_toolchain_armv7_nerves_linux_gnueabihf, "~> 13.2.0", runtime: false},
       {:nerves_system_linter, "~> 0.4", only: [:dev, :test], runtime: false},
       {:ex_doc, "~> 0.22", only: :docs, runtime: false}
     ]
@@ -105,10 +105,10 @@ defmodule FarmbotSystemRpi3.Mixfile do
       "CHANGELOG.md",
       "cmdline.txt",
       "config.txt",
-      "fwup-revert.conf",
+      "fwup-ops.conf",
       "fwup.conf",
       "LICENSE",
-      "linux-5.15.defconfig",
+      "linux-6.1.defconfig",
       "mix.exs",
       "nerves_defconfig",
       "post-build.sh",

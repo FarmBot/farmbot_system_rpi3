@@ -12,6 +12,94 @@ follows:
    releases, and Linux kernel updates. They're also made to fix bugs and add
    features to the build infrastructure.
 
+## v1.27.0
+
+This is a major Buildroot update.
+
+Please see the [nerves_system_br v1.27.0 release notes](https://github.com/nerves-project/nerves_system_br/releases/tag/v1.26.0)
+for upgrade instructions if you've forked this system.
+
+* Changes
+  * The `libcamera` and `rpicam_apps` packages have been replaced with the
+    Raspberry Pi-forked versions for better compatibility. Please see
+    `nerves_system_br` release notes.
+
+* Updated dependencies
+  * Linux 6.1.73 (Raspberry Pi 20240124 release)
+  * [nerves_system_br v1.27.0](https://github.com/nerves-project/nerves_system_br/releases/tag/v1.27.0)
+  * [Buildroot 2024.02](https://lore.kernel.org/buildroot/87msrczp4z.fsf@48ers.dk/)
+  * [Erlang/OTP 26.2.3](https://erlang.org/download/OTP-26.2.3.README)
+
+## v1.26.0
+
+This is a major Buildroot update.
+
+Please see the [nerves_system_br v1.26.0 release notes](https://github.com/nerves-project/nerves_system_br/releases/tag/v1.26.0)
+for upgrade instructions if you've forked this system.
+
+* Updated dependencies
+  * [Erlang/OTP 26.2.2](https://erlang.org/download/OTP-26.2.2.README)
+  * [nerves_system_br v1.26.1](https://github.com/nerves-project/nerves_system_br/releases/tag/v1.26.1)
+  * [Buildroot 2023.11.1](https://lore.kernel.org/buildroot/87cyu2k2gu.fsf@48ers.dk/T/)
+
+## v1.25.2
+
+This is a security/bug fix update.
+
+*  Package updates
+  * [Erlang/OTP 26.2.1](https://erlang.org/download/OTP-26.2.1.README)
+  * [nerves_heart 2.3.0](https://github.com/nerves-project/nerves_heart/releases/tag/v2.3.0)
+
+## v1.25.1
+
+This fixes an accidental regression in 1.25.0 with the Linux 6.1 update. The
+Linux configuration wasn't updated correctly and it didn't work. This release
+has the fixed configuration.
+
+## v1.25.0
+
+This is a major Buildroot, toolchain, and Linux kernel update that also adds
+support for using Scenic without customizing the system.
+
+Please see [nerves_system_br v1.25.0 release notes](https://github.com/nerves-project/nerves_system_br/releases/tag/v1.25.0)
+for upgrade instructions if you've forked this system.
+
+* New features
+  * Add libcairo for [Scenic](https://github.com/ScenicFramework/scenic) support
+
+* Updated dependencies
+  * Linux 6.1.63 (Raspberry Pi stable_20231123 release)
+  * [nerves_system_br v1.25.2](https://github.com/nerves-project/nerves_system_br/releases/tag/v1.25.2)
+  * [Buildroot 2023.08.4](https://lore.kernel.org/buildroot/87o7f6t7fs.fsf@48ers.dk/T/)
+  * [Erlang/OTP 26.1.2](https://erlang.org/download/OTP-26.1.2.README)
+
+## v1.24.1
+
+This is a security/bug fix update.
+
+* Package updates
+  * [nerves_system_br v1.24.1](https://github.com/nerves-project/nerves_system_br/releases/tag/v1.24.1)
+  * [Erlang/OTP 26.1.1](https://erlang.org/download/OTP-26.1.1.README)
+  * [Buildroot 2023.05.3](https://lore.kernel.org/buildroot/87h6ngup34.fsf@48ers.dk/T/)
+
+## v1.24.0
+
+This is a Buildroot version update that appears to mostly contain bug and
+security fixes. It should be a low risk upgrade from v1.23.2.
+
+* New features
+  * Support factory reset, preventing firmware reverts. See [Nerves.Runtime.FwupOps](https://hexdocs.pm/nerves_runtime/Nerves.Runtime.FwupOps.html)
+
+* Updated dependencies
+  * [nerves_system_br v1.24.0](https://github.com/nerves-project/nerves_system_br/releases/tag/v1.24.0)
+  * [Buildroot 2023.05.2](https://lore.kernel.org/buildroot/87ledrkrpp.fsf@48ers.dk/T/), [2023.05.1](https://lore.kernel.org/buildroot/87351m8qm4.fsf@48ers.dk/T/), [2023.05](https://lore.kernel.org/buildroot/87r0qn2c77.fsf@48ers.dk/T/)
+  * [Erlang/OTP 26.1](https://erlang.org/download/OTP-26.1.README)
+
+## v1.23.2
+
+* Updated dependencies
+  * [nerves_system_br v1.23.3](https://github.com/nerves-project/nerves_system_br/releases/tag/v1.23.3)
+
 ## v1.23.1
 
 This is a bug and security fix update. It should be a low risk upgrade.
